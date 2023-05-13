@@ -1,14 +1,14 @@
 #include "HomePets.h"
 
-class Parrot : public HomePets {
+class Hamster : public HomePets {
 public:
-    Parrot()
+    Hamster()
     {
-        this->name = "Êºøà";
-        this->type = "Ïàïóãà";
+        this->name = "Ïðèâ³ä";
+        this->type = "Õîì’ÿê";
     }
 
-    Parrot(string name, string type)
+    Hamster(string name, string type)
     {
         this->name = name;
         this->type = type;
@@ -21,11 +21,11 @@ public:
 
     void Show() override
     {
-        cout << "Íà ³ì'ÿ " << this->name << ". Ëþáèòü ñï³âàòè" << endl;
+        cout << "Íà ³ì'ÿ " << this->name << ". Í³êîãî íå ëþáèòü" << endl;
     }
 
     void Sound() override {
-        cout << this->type << " âì³º êàçàòè: ÕÎÏ ÕÎÏ" << endl;
+        cout << this->type << " âì³º êàçàòè: ÕÐÓÌ-ÕÐÓÌ" << endl;
     }
 
     void setType(string type)
@@ -38,7 +38,7 @@ public:
         return this->type;
     }
 
-    ~Parrot()
+    ~Hamster()
     {
         name.clear();
         type.clear();

@@ -1,26 +1,34 @@
 #include "cat.h"
 #include "dog.h"
 #include "parrot.h"
-#include <vector>
+#include "hamster.h"
+
+
 
 int main()
 {
     ukr_lang;
-    vector<Pets*> pets;
-    pets.push_back(new Cat());
-    pets.push_back(new Dog());
-    pets.push_back(new Parrot());
-    for (size_t i = 0; i < pets.size(); i++)
+    
+    HomePets** pets = new HomePets * [4]
     {
-        pets[i]->About();
-        pets[i]->Say();
-        
+        new Dog(),
+        new Cat(),
+        new Parrot(),
+        new Hamster()
+    };
+
+    for (size_t i = 0; i < 4; i++)
+    {      
+        pets[i]->Type();
+        pets[i]->Show();
+        pets[i]->Sound();
         cout << endl << endl;
     }
-    for (size_t i = 0; i < pets.size(); i++)
+
+    for (size_t i = 0; i < 2; i++)
     {
         delete pets[i];
     }
-    pets.clear();
+
     return 0;
 }

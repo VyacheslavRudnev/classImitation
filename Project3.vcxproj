@@ -130,8 +130,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="hamster.h" />
     <ClInclude Include="parrot.h" />
-    <ClInclude Include="Pets.h" />
+    <ClInclude Include="HomePets.h" />
     <ClInclude Include="cat.h" />
     <ClInclude Include="dog.h" />
   </ItemGroup>
