@@ -1,25 +1,16 @@
 #include "list.h"
 
-template <typename T> class Element_2 {
-public:
-    T value;
-    Element_2* next;
-    Element_2() : value(), next(nullptr) {}
-    Element_2(T value) : value(value), next(nullptr) {}
-    ~Element_2() = default;
-};
-
 template <typename T> class stack : public List<T>
 {
 private:
-    Element_2<T>* _head;
-    Element_2<T>* _tail;
+    Element<T>* _head;
+    Element<T>* _tail;
     int _size;
 
 public:
     stack() : _head(nullptr), _tail(nullptr), _size(0) {}
     ~stack() {
-        Element_2<T>* temp = _head;
+        Element<T>* temp = _head;
         while (temp != nullptr) {
             temp = temp->next;
             delete _head;
@@ -28,8 +19,8 @@ public:
         _tail = nullptr;
     }
 
-    void push_back(T value) {
-        Element_2<T>* temp = new Element_2<T>(value);
+    void push_back(T value) override {
+        Element<T>* temp = new Element<T>(value);
         if (_head == nullptr) {
             _head = temp;
             _tail = temp;
@@ -41,7 +32,7 @@ public:
         _size++;
     }
     
-    void pop_back() {
+    void pop_back() override {
         if (_head == nullptr) {
             return;
         }
@@ -51,7 +42,7 @@ public:
             _tail = nullptr;
         }
         else {
-            Element_2<T>* temp = _head;
+            Element<T>* temp = _head;
             while (temp->next != _tail) {
                 temp = temp->next;
             }
@@ -62,13 +53,14 @@ public:
         _size--;
     }
     
-    void print() {
-        Element_2<T>* temp = _head;
+    void print() override {
+        Element<T>* temp = _head;
         while (temp != nullptr) {
             cout << temp->value << " ";
             temp = temp->next;
         }
         cout << endl;
     }
+    int size() { return _size; }
    
 };

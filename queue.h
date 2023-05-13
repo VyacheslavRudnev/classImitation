@@ -1,14 +1,5 @@
 #include "list.h"
 
-template <typename T> class Element_3 {
-public:
-    T value;
-    Element_3* next;
-    Element_3() : value(), next(nullptr) {}
-    Element_3(T value) : value(value), next(nullptr) {}
-    ~Element_3() = default;
-};
-
 template <typename T> class queue : public List<T>
 {
 protected:
@@ -28,7 +19,7 @@ public:
         _tail = nullptr;
     }
 
-    void push_back(T value) 
+    void push_back(T value) override
     {
         Element<T>* temp = new Element<T>(value);
         if (_head == nullptr) {
@@ -42,7 +33,8 @@ public:
         }
         _size++;
     }
-    int copy_q() {
+    int copy_q() 
+    {
         Element<T>* temp = _head;
         int count = 0;
         while (temp != nullptr) {
@@ -51,7 +43,8 @@ public:
         return _head;
     }
 
-    void pop_front() {
+    void pop_front() override
+    {
         if (_head == nullptr) {
             return;
         }
@@ -69,7 +62,8 @@ public:
         _size--;
     }
 
-    void print() {
+    void print() override
+    {
         Element<T>* temp = _head;
         while (temp != nullptr) {
             cout << temp->value << " ";
