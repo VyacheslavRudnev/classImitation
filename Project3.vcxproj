@@ -130,10 +130,10 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cart.h" />
-    <ClInclude Include="vehicle.h" />
-    <ClInclude Include="car.h" />
-    <ClInclude Include="bicycle.h" />
+    <ClInclude Include="parrot.h" />
+    <ClInclude Include="Pets.h" />
+    <ClInclude Include="cat.h" />
+    <ClInclude Include="dog.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

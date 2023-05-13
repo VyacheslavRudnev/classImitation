@@ -1,42 +1,26 @@
-#include "car.h"
-#include "bicycle.h"
-#include "cart.h"
+#include "cat.h"
+#include "dog.h"
+#include "parrot.h"
 #include <vector>
 
-
-
 int main()
-{ukr_lang;
-	vector<Vehicle*> vehicles;
-
-    int numPassengers = 0;
-    int distance = 0;
-
-    cout << "¬вед≥ть к≥льк≥сть пасажир≥в: ";
-    cin >> numPassengers;
-    cout << "¬вед≥ть в≥дстань в км : ";
-    cin >> distance;
-
-	vehicles.push_back(new Car(distance, numPassengers));
-	vehicles.push_back(new Bicycle(distance, numPassengers));
-	vehicles.push_back(new Cart(distance, numPassengers));
-
-	
-	for (size_t i = 0; i < vehicles.size(); i++)
-	{
-		vehicles[i]->Move();
-        cout << "„ас перевезенн€ пасажир≥в на в≥дстань: " << distance << " км складе " << vehicles[i]->Time() << " годин" << endl;
-        cout << "¬арт≥сть перевезенн€ : " << vehicles[i]->Cost() << " грн" << endl;
+{
+    ukr_lang;
+    vector<Pets*> pets;
+    pets.push_back(new Cat());
+    pets.push_back(new Dog());
+    pets.push_back(new Parrot());
+    for (size_t i = 0; i < pets.size(); i++)
+    {
+        pets[i]->About();
+        pets[i]->Say();
         
-	} 
-    cout << endl;
-
-    
-	for (size_t i = 0; i < vehicles.size(); i++)
-	{
-		delete vehicles[i];
-	} 
-	vehicles.clear();
-  
-	return 0;
+        cout << endl << endl;
+    }
+    for (size_t i = 0; i < pets.size(); i++)
+    {
+        delete pets[i];
+    }
+    pets.clear();
+    return 0;
 }
