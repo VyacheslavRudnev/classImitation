@@ -4,10 +4,10 @@
     <Filter Include="Main">
       <UniqueIdentifier>{5e20148f-4d1e-4b9c-bee8-8e0900aa4e95}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Parent">
+    <Filter Include="Passport">
       <UniqueIdentifier>{4089e69d-21b7-4747-baa7-ee54c2f223de}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Child">
+    <Filter Include="ForeignPassport">
       <UniqueIdentifier>{c14dbeb8-714f-4d04-ae34-9f81e8a686d6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -17,17 +17,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="vehicle.h">
-      <Filter>Parent</Filter>
+    <ClInclude Include="Passport.h">
+      <Filter>Passport</Filter>
     </ClInclude>
-    <ClInclude Include="car.h">
-      <Filter>Child</Filter>
-    </ClInclude>
-    <ClInclude Include="bicycle.h">
-      <Filter>Child</Filter>
-    </ClInclude>
-    <ClInclude Include="cart.h">
-      <Filter>Child</Filter>
+    <ClInclude Include="ForeignPassport.h">
+      <Filter>ForeignPassport</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
