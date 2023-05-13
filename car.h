@@ -26,6 +26,8 @@ public:
 	void Move() override
 	{
 		cout << type << " їде зі швидкісттю : " << max_speed << " км/год" << endl;
+		cout << "Максимальна пасажиромісткість : " << max_passengers << endl;
+
 	}
 
 	int Time() override 

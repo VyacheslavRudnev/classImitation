@@ -27,6 +27,7 @@ int main()
 		vehicles[i]->Move();
         cout << "Час перевезення пасажирів на відстань: " << distance << " км складе " << vehicles[i]->Time() << " годин" << endl;
         cout << "Вартість перевезення : " << vehicles[i]->Cost() << " грн" << endl;
+		cout << "============================================" << endl;
         
 	} 
     cout << endl;
