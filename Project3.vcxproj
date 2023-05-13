@@ -130,10 +130,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cart.h" />
-    <ClInclude Include="vehicle.h" />
-    <ClInclude Include="car.h" />
-    <ClInclude Include="bicycle.h" />
+    <ClInclude Include="String.h" />
+    <ClInclude Include="bitString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
