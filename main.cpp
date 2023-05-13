@@ -1,7 +1,5 @@
-#include "cat.h"
-#include "dog.h"
-#include "parrot.h"
-#include "hamster.h"
+#include "stack.h"
+#include "queue.h"
 
 
 
@@ -9,26 +7,38 @@ int main()
 {
     ukr_lang;
     
-    HomePets** pets = new HomePets * [4]
-    {
-        new Dog(),
-        new Cat(),
-        new Parrot(),
-        new Hamster()
-    };
+	cout << "QUEUE" << endl;
+	queue<int> liqst;
 
-    for (size_t i = 0; i < 4; i++)
-    {      
-        pets[i]->Type();
-        pets[i]->Show();
-        pets[i]->Sound();
-        cout << endl << endl;
-    }
+	list.push_back(1);
+	list.push_back(2);
+	list.push_back(3);
+	list.push_back(4);
+	list.print();
+	cout << "______________" << endl << endl;
+	list.pop_front();
+	list.print();
+	cout << "______________" << endl << endl;
+	list.push_back(5);
+	list.pop_front();
+	list.print();
+	cout << "______________" << endl << endl;
 
-    for (size_t i = 0; i < 2; i++)
-    {
-        delete pets[i];
-    }
+	cout << "STACK" << endl;
+	stack<int> list_2;
+	list_2.push_back(1);
+	list_2.push_back(2);
+	list_2.push_back(3);
+	list_2.push_back(4);
+	list_2.push_back(5);
+	list_2.push_back(6);
+	list_2.print();
+	cout << "______________" << endl << endl;
+	list_2.pop_back();
+	list_2.print();
+	cout << "______________" << endl << endl;
+	list_2.pop_back();
+	list_2.print();
 
-    return 0;
+	return 0;
 }
