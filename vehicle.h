@@ -11,7 +11,8 @@ protected:
 	string type;
 	int max_speed;
 	int distance;
-	int max_passengers;
+	int passengers;
+	int max_pass;
 	int cost;
 	
 public: 
@@ -20,7 +21,8 @@ public:
 		type = "unknow";
 		max_speed = 0;
 		distance = 0;
-		max_passengers = 0;
+		passengers = 0;
+		max_pass = 0;
 		cost = 0;
 	} 
 	Vehicle(int distance, int numPassengers)
@@ -28,7 +30,7 @@ public:
 		type = "unknow";
 		max_speed = 0;
 		this->distance = distance;
-		max_passengers = numPassengers;
+		max_pass = numPassengers;
 		cost = 0;
 	}
 	
