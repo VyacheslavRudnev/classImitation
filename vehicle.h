@@ -25,12 +25,12 @@ public:
 		max_pass = 0;
 		cost = 0;
 	} 
-	Vehicle(int distance, int numPassengers)
+	Vehicle(int distance, int numPass)
 	{
 		type = "unknow";
 		max_speed = 0;
 		this->distance = distance;
-		max_pass = numPassengers;
+		max_pass = numPass;
 		cost = 0;
 	}
 	
