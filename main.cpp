@@ -11,9 +11,37 @@ int main()
 
     int numPassengers = 0;
     int distance = 0;
+	do
+	{
+		cout << "Введіть кількість пасажирів: ";
+		cin >> numPassengers;
+		try
+		{
+			if (numPassengers < 0)
+			{
+				throw exception("Кількість пасажирів не може бути від'ємною! Спробуйте ще раз\n");
+			}
+			if (numPassengers == 0)
+			{
+				throw exception("Кількість пасажирів не може бути нульовою! Спробуйте ще раз\n");
+			}
+		}
+		/*catch (exception& numPassengers)
+		{
+			cout << numPassengers.what() << endl;
+		}
+		catch (const string& str)
+		{
+			cerr << "Кількість пасажирів не може бути типу string" << '\n\n';
+		}
+		catch (...)
+		{
 
-    cout << "Введіть кількість пасажирів: ";
-    cin >> numPassengers;
+		}*/
+	} 
+	while (numPassengers <=0);
+		   
+	
     cout << "Введіть відстань в км : ";
     cin >> distance;
 
